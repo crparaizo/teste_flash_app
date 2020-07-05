@@ -1,0 +1,133 @@
+{
+	"info": {
+		"_postman_id": "762e0792-7294-4abe-b4ce-8895a6725922",
+		"name": "Flash_App",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://localhost:8080/api/tutorials",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"nome_empresa\": \"Flash\",\n\t\"nome_fantasia\": \"Flash Benefícios\",\n\t\"cnpj\": \"93.863.240/0001-09\",\n\t\"endereco\": \"Rua tal\",\n    \"funcionarios\": [{ \n\t\t\"nome_funcionario\": \"\",\n    \t\"sobrenome\": \"\", \n\t\t\"cpf\": \"\",\n    \t\"email\": \"\" \n\t}]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/registros",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"registros"
+					]
+				},
+				"description": "POST com inserção total dos dados da empresa e dos funcionários juntos"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/api/tutorials/",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/registros/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"registros",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/api/registros/",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/registros/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"registros",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/api/registros/funcionarios",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"nome_empresa\": \"Flash\",\r\n\t\"nome_fantasia\": \"Flash benefícios\",\r\n\t\"cnpj\": \"93.863.240/0001-09\",\r\n\t\"endereco\": \"Rua tal\",\r\n    \"funcionarios\":[\r\n    { \r\n\t\t\"nome_funcionario\": \"Lucas\",\r\n    \t\"sobrenome\": \"Santos\", \r\n\t\t\"cpf\": \"12345678914\",\r\n    \t\"email\": \"lucas@gmail.com\" \r\n\t},\r\n    { \r\n\t\t\"nome_funcionario\": \"Pedro\",\r\n    \t\"sobrenome\": \"Silva\", \r\n\t\t\"cpf\": \"96857456823\",\r\n    \t\"email\": \"pedro@gmail.com\" \r\n\t}\r\n                ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/registros/5f024328178cd16f64c4e4b1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"registros",
+						"5f024328178cd16f64c4e4b1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/api/registros/5f014d5e43f53a2190c298d4",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/registros/5f024328178cd16f64c4e4b1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"registros",
+						"5f024328178cd16f64c4e4b1"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
